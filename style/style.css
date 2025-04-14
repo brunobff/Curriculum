@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Boldonse&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --cor-fundo: #9DB2BF;
+    --cor-fonte: #DDE6ED;
+    --cor-titulo: #526D82;
+    --cor-rodape: darkgray;
+    --cor-hover: #DDE6ED;
+
+    --fonte-titulo: "Boldonse", system-ui;
+    --fonte-texto: "Nunito", sans-serif;
+    --fonte-tamanho-texto: 1rem;
+    --fonte-tamanho-titulo: 1.5rem;
+}
+
+.navegacao{
+    display: flex;
+    justify-content: center;
+    gap: 2%;
+    padding: 1%;
+    font-family: var(--fonte-titulo);
+    text-decoration: none;
+    background-color: var(--cor-titulo);
+}
+
+.navegacao__link{
+    text-decoration: none;
+    color: inherit;
+}
+
+.navegacao__link:hover{
+    text-shadow: 0px 0px 10px var(--cor-hover);
+}
+
+.corpo{
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    padding: 8% 8% 20% 8%;
+    background-color: var(--cor-fundo);
+}
+
+.corpo__texto{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+}
+
+.corpo__texto__titulo{
+    font-family: var(--fonte-titulo);
+    font-size: var(--fonte-tamanho-titulo);
+}
+
+.corpo__texto__paragrafo{
+    font-family: var(--fonte-texto);
+    font-size: var(--fonte-tamanho-texto);
+}
+
+.corpo__texto__imagem{
+    width: 25%;
+    height: auto;
+}
+
+.rodape{
+    background-color: var(--cor-rodape);
+    display: flex;
+    padding: 3% 3%;
+    justify-content: center;
+}
+
+@media(max-width: 800px){
+
+    .corpo{
+        flex-direction: column-reverse;
+
+    }
+    .corpo__texto{
+        width: auto;
+    }
+    .corpo__texto__imagem{
+        width: 70%;
+        height: auto;
+    }
+}
